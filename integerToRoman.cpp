@@ -41,10 +41,8 @@ public:
         
         while(num != 0) {
             running = num%10 * pow(10, index);
-            cout<<"Running: "<<running<<endl;
             num/=10;
             index++;
-            cout<<"Now num: "<<num<<endl;
             if (running == 0) {
                 continue;
             }
@@ -136,7 +134,6 @@ public:
                 run_str = "";
             }
         }
-        // cout<<"HERE IS THE STACK: ";
         while(!Stack.empty()) {
             // cout<<Stack.top();
             answer += Stack.top();
