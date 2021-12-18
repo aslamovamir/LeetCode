@@ -12,14 +12,16 @@
 
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
+        #a dictionary of frequencies
         FreqDict = {}
+        #majority threshold
         majority = len(nums)/2
         for num in nums:
             if num in FreqDict:
                 FreqDict[num] += 1
             else:
                 FreqDict[num] = 1
-            
+        #to be a majority, the number must be greater than the value below 
         for key, value in FreqDict.items():
             if value > majority:
                 return key
