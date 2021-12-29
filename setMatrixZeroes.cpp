@@ -15,7 +15,7 @@ public:
     void setZeroes(vector<vector<int>>& matrix) {
         //0 tracker
         vector<vector<int>> tracker;
-        //the first element of the array is row number amd the second is the column number
+        //the first element of the array is row number and the second is the column number
         vector<int> row_col;
         for (int i = 0; i < matrix.size(); i++) {
             for (int j = 0; j < matrix[0].size(); j++) {
