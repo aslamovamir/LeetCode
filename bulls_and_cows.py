@@ -72,11 +72,6 @@ class Solution:
             
             return cows
             
-            
-            
-        # let's get the digits of both secret and guess in seperate lists
-        sec_list = [int(digits) for digit in str(secret)]
-        gue_list = [int(digit) for digit in str(guess)]
         
         return f"{count_bulls(secret, guess)}A{count_cows(secret, guess)}B"
        
