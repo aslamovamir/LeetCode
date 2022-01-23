@@ -33,15 +33,19 @@
 
 class Solution:
     def replaceWords(self, dictionary: List[str], sentence: str) -> str:
+        # get all the words in a list
         split_words = sentence.split(' ')
-        print(split_words)
-        
+        # go through the roots and replace any successor word with the root from the list of words
         for root in dictionary:
             for i in range(len(split_words)):
+                # if the root is in the word as a substring
                 if root in split_words[i]:
+                    # if the substring is at the beginning of the word
                     if root == split_words[i][:len(root)]:
+                        # swap
                         split_words[i] = root
-        
+        # return the string joined from the modified list of words
         return ' '.join(split_words)
-      
+       
+       
       
